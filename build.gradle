@@ -15,6 +15,7 @@ apply plugin: "kotlin"
 
 repositories {
 	maven { url  "https://dl.bintray.com/r3/corda" }
+	mavenCentral()
 }
 
 dependencies {
@@ -27,8 +28,12 @@ dependencies {
 	compile 'net.corda.plugins:quasar-utils:0.7'
 
 	compile group: 'com.google.guava', name: 'guava', version: '19.0'
+	compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 
 task wrapper(type: Wrapper) {
 	gradleVersion = '3.3' //version required
+}
+sourceSets {
+	main.java.srcDirs += 'src/main/kotlin'
 }
