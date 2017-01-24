@@ -1,4 +1,17 @@
+buildscript {
+	ext.kotlin_version = '1.0.6'
+
+	repositories {
+		mavenCentral()
+	}
+
+	dependencies {
+		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+	}
+}
+
 apply plugin: "java"
+apply plugin: "kotlin"
 
 repositories {
 	maven { url  "https://dl.bintray.com/r3/corda" }
