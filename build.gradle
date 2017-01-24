@@ -25,6 +25,8 @@ dependencies {
 	compile 'net.corda:finance:0.7'
 	compile 'net.corda:node:0.7'
 	compile 'net.corda.plugins:quasar-utils:0.7'
+
+	compile group: 'com.google.guava', name: 'guava', version: '19.0'
 }
 
 task wrapper(type: Wrapper) {
